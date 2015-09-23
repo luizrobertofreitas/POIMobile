@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="com.poimobile.Dashboard" name="Dashboard">
+    <adfmf:content id="com.poimobile.Dashboard.1">
+      <adfmf:amx file="com.poimobile.Dashboard/dashboard-task-flow.xml#dashboard-task-flow"/>
+    </adfmf:content>
+    <adfmf:preferences/>
+  </adfmf:feature>
+</adfmf:features>

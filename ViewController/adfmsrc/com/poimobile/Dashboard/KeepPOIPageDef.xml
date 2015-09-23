@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.23.11" id="KeepPOIPageDef"
+                Package="com.poimobile.Dashboard">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="int" Name="createPOI__x" IsQueriable="false"/>
+      <variable Type="int" Name="createPOI__y" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createPOI__name" IsQueriable="false"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="createPOI" RequiresUpdateModel="true" Action="invokeMethod" MethodName="createPOI"
+                  IsViewObjectMethod="false" DataControl="POIRESTClient" InstanceName="data.POIRESTClient.dataProvider">
+      <NamedData NDName="_x" NDType="int" NDValue="${bindings.createPOI__x}"/>
+      <NamedData NDName="_y" NDType="int" NDValue="${bindings.createPOI__y}"/>
+      <NamedData NDName="_name" NDType="java.lang.String" NDValue="${bindings.createPOI__name}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="_x">
+      <AttrNames>
+        <Item Value="createPOI__x"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="_y">
+      <AttrNames>
+        <Item Value="createPOI__y"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="_name">
+      <AttrNames>
+        <Item Value="createPOI__name"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

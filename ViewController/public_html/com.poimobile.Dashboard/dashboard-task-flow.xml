@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="dashboard-task-flow">
+    <default-activity>ListOfPOIs</default-activity>
+    <view id="ListOfPOIs">
+      <page>/com.poimobile.Dashboard/ListOfPOIs.amx</page>
+    </view>
+    <view id="SearchNearestPOI">
+      <page>/com.poimobile.Dashboard/SearchNearestPOI.amx</page>
+    </view>
+    <view id="KeepPOI">
+      <page>/com.poimobile.Dashboard/KeepPOI.amx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>ListOfPOIs</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>search</from-outcome>
+        <to-activity-id>SearchNearestPOI</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>keep</from-outcome>
+        <to-activity-id>KeepPOI</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>SearchNearestPOI</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>ListOfPOIs</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>KeepPOI</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>ListOfPOIs</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>

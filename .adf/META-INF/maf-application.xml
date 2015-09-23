@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="POI Mobile" id="com.company.POIMobile"
+                   appControllerFolder="ApplicationController"
+                   listener-class="com.poimobile.application.LifeCycleListenerImpl"
+                   vendor="luizrobertofreitas.github.io">
+  <adfmf:featureReference refId="com.poimobile.Dashboard" id="fr1"/>
+  <adfmf:preferences/>
+  <adfmf:remoteURLWhiteList/>
+</adfmf:application>
